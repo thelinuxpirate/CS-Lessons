@@ -1,0 +1,1 @@
+#+title: NvChad Basics, Configuration, & Lua

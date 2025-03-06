@@ -1,0 +1,52 @@
+#+title: Installing a NeoVim Distribution
+
+* Baby Steps
+** What is NeoVim?
+*AI Summary:*
+NeoVim is a highly customizable & efficient text editor designed for programmers.
+It is an improved version of Vim, which itself is a modal text editor that allows users to switch
+between different modes (such as inserting text or issuing commands).
+Unlike traditional editors that rely on menus & buttons, NeoVim is controlled
+primarily through the keyboard, making it incredibly fast for those who learn its commands.
+What makes NeoVim stand out from other editors is its extensibility. It supports plugins
+written in various programming languages, integrates well with modern development tools,
+& provides asynchronous execution, allowing it to remain responsive even when running complex tasks.
+- ChatGPT 3/5/25
+
+** What is a "Distribution"?
+**TRONG Summary:**
+In short terms, a distribution is the simple act of sharing something out.
+Often used in Computer Science, distrobutions are different versions of a piece of software
+(or operating system) that's used to reinact the purpose of said software.
+
+Examples:
+- Linux Distributions
+- IDE Distributions
+
+** Say Hello to NvChad
+NvChad is a NeoVim distribution (modified version of software) that is "blazing[ly] fast
+& its Neovim config providies solid defaults [with] a beautiful UI".
+
+Built-in Features List:
+
+- Base46 (NvChad's very own theming plugin that includes 68 themes as of 3/5/25)
+- Theme Switcher
+- Statusline
+- Tabufline
+- Term & more
+[[https://nvchad.com/docs/features] [NvChad Feature List]]
+
+** NvChad Installation
+**TRONG Summary:** (Make sure you have 'Git' installed)
+On Unix systems you will have to run the following command:
+#+begin_src sh
+$ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+#+end_src
+
+After that do the following sequences on your keyboard:
+- Hit the ':' key
+- After the new prompt appears at the bottom of the screen type: ':MasonInstallAll'
+- Delete the '.git' folder from your 'nvim' folder if you'd like
+
+Should be a straightfoward installation as long as you follow the instructions from:
+[[https://nvchad.com/docs/quickstart/install] [NvChad Installation Summary]]
