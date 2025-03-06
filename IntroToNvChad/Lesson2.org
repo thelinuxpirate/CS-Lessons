@@ -1,1 +1,62 @@
 #+title: NvChad Basics, Configuration, & Lua
+
+* NvChad
+** File Structure
+*NvChad* has a unique file-structure.
+The way file-structures work in applications is that there are
+certain directory paths that the application will look for its configuration files.
+
+The default installation of NvChad will look something like:
+#+begin_src sh
+~/.config/nvim/
+├── init.lua
+├── lazy-lock.json
+├── LICENSE
+├── lua
+│   ├── chadrc.lua
+│   ├── configs
+│   │   └── pluginnames.lua
+│   ├── mappings.lua
+│   ├── options.lua
+│   └── plugins
+│       └── init.lua
+└── README.md
+#+end_src
+
+This is pretty simple to read for someone who understands the hierarchy of a file-tree.
+But in short there are *three* main directories (folders) that you should look at.
+
+- lua/ Originally NeoVim's configured in its own language called 'VimScript'
+  VimScript sucks ass & there is no point in learning its significance.
+
+  Meanwhile Lua is more efficient & has actual use-cases in the real-world
+  instead of its purpose to only configure an editor.
+
+- lua/configs/ This directory will be where you store the files that contain
+  the lua code of your installed plugin's configurations.
+
+- lua/plugins/ This folder should only contain one file 'init.lua'.
+  That file will contain all the code of the plugins you want installed
+  in your configuration.
+
+*** Whats an 'init' in programming?
+If you're confused on why the word 'init' has been recurring this entire time
+here is an overly-complex simplification of why that is the case:
+
+*AI Summary:*
+In short, "init" simplifies programming by automating setup processes, making code more efficient & easier to manage.
+
+The word "init" appears frequently in programming because it is short for "initialize",
+meaning to set up something before using it. It is commonly used in various contexts to simplify
+& automate the setup process of different parts of a program.
+- ChatGPT
+
+Here’s how:
+- In Configuration Files:
+  Many tools, like NeoVim (init.lua or init.vim) or Git (init command), use "init" to
+  signify the starting setup file or command.
+  For example, git init sets up a new Git repository.
+
+- In Programming Frameworks:
+  Frameworks often use "init" files to handle setup tasks automatically,
+  making code more organized & reducing the amount of repetitive setup work.
