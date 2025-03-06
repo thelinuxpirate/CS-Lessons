@@ -1,4 +1,4 @@
-#+title: NvChad Basics, Configuration, & Lua
+
 
 * NvChad
 ** File Structure
@@ -26,16 +26,15 @@ The default installation of NvChad will look something like:
 This is pretty simple to read for someone who understands the hierarchy of a file-tree.
 But in short there are *three* main directories (folders) that you should look at.
 
-- lua/ Originally NeoVim's configured in its own language called 'VimScript'
+- =lua/= Originally NeoVim's configured in its own language called 'VimScript'
   VimScript sucks ass & there is no point in learning its significance.
-
   Meanwhile Lua is more efficient & has actual use-cases in the real-world
   instead of its purpose to only configure an editor.
 
-- lua/configs/ This directory will be where you store the files that contain
+- =lua/configs/= This directory will be where you store the files that contain
   the lua code of your installed plugin's configurations.
 
-- lua/plugins/ This folder should only contain one file 'init.lua'.
+- =lua/plugins/= This folder should only contain one file 'init.lua'.
   That file will contain all the code of the plugins you want installed
   in your configuration.
 
@@ -53,7 +52,7 @@ meaning to set up something before using it. It is commonly used in various cont
 & automate the setup process of different parts of a program.
 - ChatGPT
 
- 
+
 Here’s how:
 - In Configuration Files:
   Many tools, like NeoVim (init.lua or init.vim) or Git (init command), use "init" to
