@@ -1,4 +1,4 @@
-
+#+title: NvChad Basics, Configuration, & Lua
 
 * NvChad
 ** File Structure
@@ -39,7 +39,7 @@ But in short there are *three* main directories (folders) that you should look a
   in your configuration.
 
 *** Whats an 'init' in programming?
-If you're confused on why the word 'init' has been recurring this entire time
+*If* you're confused on why the word 'init' has been recurring this entire time
 here is an overly-complex simplification of why that is the case:
 
 *AI Summary:*
@@ -62,3 +62,36 @@ Here’s how:
 - In Programming Frameworks:
   Frameworks often use "init" files to handle setup tasks automatically,
   making code more organized & reducing the amount of repetitive setup work.
+
+** How the hell do I use NeoVim anyways?
+*NeoVim* is a very unique editor & the learning-curve may take awhile to master.
+If you're able to stick with it you'll see immediate performance gains. (*TTP:* Trust The Process)
+
+You can launch NeoVim by running =nvim= inside of a terminal (or the =vim= alias on some systems).
+This will launch NeoVim in a blank 'buffer'.
+
+Also if you've messed around with the editor you may have noticed that typing doesn't do jack shit,
+& it just messed some stuff up. That's because NeoVim is a 'modal' editor.
+*** Modal?
+*AI Summary*
+A modal text editor is an editor that has different modes for different tasks.
+Instead of always inserting text like a regular editor, a modal editor lets you switch between modes.
+
+How it works in the context of NeoVim:
+
+
+NeoVim has multiple modes, but the most important ones for beginners are:
+
+    Normal Mode – Used for navigation & editing (e.g., moving the cursor, deleting words, copying & pasting).
+    Insert Mode – Used for typing text like a traditional text editor.
+    Visual Mode – Used for selecting text to copy, delete, or modify.
+
+
+Examples:
+
+    When you open a file in NeoVim, you're in Normal Mode. If you press i, you enter Insert Mode & can start typing.
+    If you press Esc, you go back to Normal Mode, where you can quickly delete a word with dw (delete word) or move around efficiently with hjkl keys.
+    To select a sentence, press v to enter Visual Mode, move the cursor, and then press y to copy it.
+
+By separating typing, navigation, & editing into different modes, NeoVim makes it faster to work with
+text once you learn the shortcuts, reducing the need for a mouse or arrow keys.
