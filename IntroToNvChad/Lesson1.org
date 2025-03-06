@@ -16,8 +16,8 @@ written in various programming languages, integrates well with modern developmen
 ** What is a "Distribution"?
 **TRONG Summary:**
 In short terms, a distribution is the simple act of sharing something out.
-Often used in Computer Science, distrobutions are different versions of a piece of software
-(or operating system) that's used to reinact the purpose of said software.
+Often used in Computer Science, distributions are different versions of a piece of software
+(or operating system) that's used to reenact the purpose of said software.
 
 Examples:
 - Linux Distributions
@@ -25,7 +25,7 @@ Examples:
 
 ** Say Hello to NvChad
 NvChad is a NeoVim distribution (modified version of software) that is "blazing[ly] fast
-& its Neovim config providies solid defaults [with] a beautiful UI".
+& its Neovim config provides solid defaults [with] a beautiful UI".
 
 Built-in Features List:
 
@@ -34,8 +34,7 @@ Built-in Features List:
 - Statusline
 - Tabufline
 - Term & more
-[[https://nvchad.com/docs/features] [NvChad Feature List]]
-
+[[https://nvchad.com/docs/features][NvChad Feature List]]
 ** NvChad Installation
 **TRONG Summary:** (Make sure you have 'Git' installed)
 On Unix systems you will have to run the following command:
@@ -48,5 +47,5 @@ After that do the following sequences on your keyboard:
 - After the new prompt appears at the bottom of the screen type: ':MasonInstallAll'
 - Delete the '.git' folder from your 'nvim' folder if you'd like
 
-Should be a straightfoward installation as long as you follow the instructions from:
-[[https://nvchad.com/docs/quickstart/install] [NvChad Installation Summary]]
+Should be a straightforward installation as long as you follow the instructions from:
+[[https://nvchad.com/docs/quickstart/install][NvChad Installation Summary]]
