@@ -14,7 +14,7 @@ written in various programming languages, integrates well with modern developmen
 - ChatGPT 3/5/25
 
 ** What is a "Distribution"?
-**TRONG Summary:**
+*TRONG Summary:*
 In short terms, a distribution is the simple act of sharing something out.
 Often used in Computer Science, distributions are different versions of a piece of software
 (or operating system) that's used to reenact the purpose of said software.
@@ -36,7 +36,7 @@ Built-in Features List:
 - Term & more
 [[https://nvchad.com/docs/features][NvChad Feature List]]
 ** NvChad Installation
-**TRONG Summary:** (Make sure you have 'Git' installed)
+*TRONG Summary:* (Make sure you have 'Git' installed)
 On Unix systems you will have to run the following command:
 #+begin_src sh
 $ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
