@@ -44,13 +44,16 @@ If you're confused on why the word 'init' has been recurring this entire time
 here is an overly-complex simplification of why that is the case:
 
 *AI Summary:*
+
 In short, "init" simplifies programming by automating setup processes, making code more efficient & easier to manage.
+
 
 The word "init" appears frequently in programming because it is short for "initialize",
 meaning to set up something before using it. It is commonly used in various contexts to simplify
 & automate the setup process of different parts of a program.
 - ChatGPT
 
+ 
 Here’s how:
 - In Configuration Files:
   Many tools, like NeoVim (init.lua or init.vim) or Git (init command), use "init" to
