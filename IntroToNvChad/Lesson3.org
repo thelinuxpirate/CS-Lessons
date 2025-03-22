@@ -1,0 +1,122 @@
+#+title: In-Depth Configuration
+
+* Basics of Lua
+** Init.lua
+*NvChad's* ~init.lua~ file is where we'll start your introduction to Lua:
+#+begin_src lua
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+vim.g.mapleader = " "
+
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+if not vim.uv.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+local lazy_config = require "configs.lazy"
+
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+  },
+
+  { import = "plugins" },
+}, lazy_config)
+
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
+
+require "options"
+require "nvchad.autocmds"
+
+vim.schedule(function()
+  require "mappings"
+end)
+#+end_src
+*** Variables
+=vim.g= – Global Variables
+
+    vim.g is used to define global variables in NeoVim. These variables are accessible from anywhere in your configuration.
+
+    Example from your file:
+
+    vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+
+    This sets a global variable base46_cache to store a path where cached theme files (defaults, statusline) are stored. Since it’s global, other scripts can access it easily.
+
+=local= – Defining Local Variables
+
+    local is used to define variables that only exist within a specific scope (like inside a function or a file). This keeps variables from interfering with other parts of the config.
+
+#+begin_src lua
+    local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+#+end_src
+    The variable =lazypath= is _local_, meaning it’s only accessible in this file. It stores the path where the lazy.nvim plugin manager is installed.
+
+=require= – Importing Modules
+
+    require is used to load external Lua files or modules. In NeoVim, this is how you load plugins, settings, & custom scripts.
+
+    Example from your file:
+
+    local lazy_config = require "configs.lazy"
+
+This loads the lazy module from the configs folder, which likely contains settings for the lazy.nvim plugin manager.
+#+begin_src lua
+    require "options"
+    require "nvchad.autocmds"
+#+end_src
+    These load separate Lua files that configure options & auto-commands for NeoVim.
+
+=vim.opt= – Setting NeoVim Options
+
+    vim.opt is used to configure NeoVim’s built-in settings (like line numbers, tab width, etc.).
+
+    In your file, it’s used here:
+#+begin_src lua
+    vim.opt.rtp:prepend(lazypath)
+#+end_src
+    This modifies rtp (runtime path) to add lazypath first, ensuring NeoVim loads plugins from the correct directory.
+
+*Summary*
+
+    =vim.g= -> Defines global variables that can be accessed anywhere.
+
+    =local= -> Defines variables only accessible in the current file.
+
+    =require= -> Loads external Lua modules (used for organizing configurations & plugins).
+
+    =vim.opt= -> Sets NeoVim’s built-in options for customization.
+
+These keywords help keep the configuration structured, modular & efficient, making it easy to manage a complex NeoVim setup!
+
+*** Comments?
+The first things you may notice are the phrases =vim.g=, =local= & =require=.
+For now just know that these are key terms that will be more important later on.
+
+The first thing that we will do is change your editor's theme.
+If you see at line 28 there are two =--= characters. In Lua this sequence is known as a '/comment/'.
+
+Comments are parts of code that aren't read, which means you can add a comment or an explanation of code
+in that line. There is a such thing that is a /multi-line comment/, this a type of comment
+that can go on for multiple lines, where only the words inside that parameter aren't read.
+
+
+*Example:*
+#+begin_src lua
+--[[
+  You can fit an explanation
+  just about anywhere
+    --]]
+
+print('as long it isn\'t out here')
+#+end_src
