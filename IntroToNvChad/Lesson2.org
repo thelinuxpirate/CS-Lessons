@@ -129,6 +129,7 @@ text once you learn the shortcuts, reducing the need for a mouse or arrow keys.
 #+end_src
 
 *AI Summary:*
+
 NeoVim’s commands exist to provide a fast, efficient, & keyboard-driven workflow that minimizes reliance on a mouse and menus.
 Instead of navigating through cluttered interfaces, users can execute powerful text-editing
 & window-management actions with short, consistent commands.
@@ -136,13 +137,13 @@ Instead of navigating through cluttered interfaces, users can execute powerful t
 
 *Why These Commands Exist & Their Use Cases*
 
-   _Quitting & Saving (:q, :w, :wq)_ – These ensure quick control over file management, allowing users to save or exit without interruptions.
+   Quitting & Saving =:q, :w, :wq= – These ensure quick control over file management, allowing users to save or exit without interruptions.
     The :q! command is useful when discarding unwanted changes.
 
-    _Buffer & Window Management (:bd, :vsp, :sp, close, only)_ – NeoVim treats buffers (open files) & windows (views) separately, making multitasking smooth.
-    Splitting windows (:vsp & :sp) lets users view multiple files side by side, while :only clears distractions by closing everything except the current window.
+    Buffer & Window Management =:bd, :vsp, :sp, close, only= – NeoVim treats buffers (open files) & windows (views) separately, making multitasking smooth.
+    Splitting windows =:vsp & :sp= lets users view multiple files side by side, while :only clears distractions by closing everything except the current window.
 
-    _Chaining Commands (|)_ – The ability to combine commands like =:bd | close= or =:bnext | only= streamlines workflows, reducing repetitive actions & keeping the workspace tidy.
+    Chaining Commands (|) – The ability to combine commands like =:bd | close= or =:bnext | only= streamlines workflows, reducing repetitive actions & keeping the workspace tidy.
 
 *Why This Method Is Superior*
 
@@ -150,6 +151,6 @@ Instead of navigating through cluttered interfaces, users can execute powerful t
 
     _Consistency_ – The command structure is predictable & follows a logic that applies across different actions.
 
-    _Automation & Flexibility_ – Commands can be combined (|) or scripted for even greater control, reducing repetitive tasks.
+    _Automation & Flexibility_ – Commands can be combined (=|=) or scripted for even greater control, reducing repetitive tasks.
 
 By relying on commands rather than a GUI-based workflow, NeoVim empowers users with precise, efficient, & scalable text editing, making it a superior choice for power users & programmers.
