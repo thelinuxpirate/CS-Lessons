@@ -73,7 +73,8 @@ This will launch NeoVim in a blank 'buffer'.
 Also if you've messed around with the editor you may have noticed that typing doesn't do jack shit,
 & it just messed some stuff up. That's because NeoVim is a 'modal' editor.
 *** Modal?
-*AI Summary*
+*AI Summary:*
+
 A modal text editor is an editor that has different modes for different tasks.
 Instead of always inserting text like a regular editor, a modal editor lets you switch between modes.
 
@@ -95,3 +96,60 @@ Examples:
 
 By separating typing, navigation, & editing into different modes, NeoVim makes it faster to work with
 text once you learn the shortcuts, reducing the need for a mouse or arrow keys.
+*** Commands, buffers, & why?
+*You* can spawn commands while in Normal & Visual modes, by hitting the =:= key.
+#+begin_src sh
+# Quitting
+:q -> Quit NeoVim
+:q! -> Quit without saving changes
+
+# Save Changes
+:w -> Write changes to file
+:wq -> Write changes to file & quit
+
+# Misc
+:e <PATH> ->
+
+# Buffer + Window Management
+:bd -> Kills current buffer
+:bnext -> Switches to next buffer
+:bprevious -> Switches to previous buffer
+
+# [Splits = Windows]
+:vsp -> Spawn a vertical split
+:sp -> Spawn a horizontal split
+
+:close -> Kills current window
+:only -> Kills all windows but the current
+
+# '|' = and
+:bd | close -> Kill buffer & close window
+:bnext | only -> Switches to the next buffer & kills rest of the open windows \
+                 but the buffer it switched to
+#+end_src
+
+*AI Summary:*
+NeoVim’s commands exist to provide a fast, efficient, & keyboard-driven workflow that minimizes reliance on a mouse and menus.
+Instead of navigating through cluttered interfaces, users can execute powerful text-editing
+& window-management actions with short, consistent commands.
+
+
+*Why These Commands Exist & Their Use Cases*
+
+   _Quitting & Saving (:q, :w, :wq)_ – These ensure quick control over file management, allowing users to save or exit without interruptions.
+    The :q! command is useful when discarding unwanted changes.
+
+    _Buffer & Window Management (:bd, :vsp, :sp, close, only)_ – NeoVim treats buffers (open files) & windows (views) separately, making multitasking smooth.
+    Splitting windows (:vsp & :sp) lets users view multiple files side by side, while :only clears distractions by closing everything except the current window.
+
+    _Chaining Commands (|)_ – The ability to combine commands like =:bd | close= or =:bnext | only= streamlines workflows, reducing repetitive actions & keeping the workspace tidy.
+
+*Why This Method Is Superior*
+
+    _Speed & Efficiency_ – Keyboard-based commands are faster than clicking through menus.
+
+    _Consistency_ – The command structure is predictable & follows a logic that applies across different actions.
+
+    _Automation & Flexibility_ – Commands can be combined (|) or scripted for even greater control, reducing repetitive tasks.
+
+By relying on commands rather than a GUI-based workflow, NeoVim empowers users with precise, efficient, & scalable text editing, making it a superior choice for power users & programmers.
